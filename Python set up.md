@@ -39,16 +39,48 @@ jupyter lab
 
 ```bash
 
+# Activate environment
 conda activate myenv
 jupyter lab
 
-# In Jupyter terminal
+# In Jupyter terminal, set remote and working directory
 cd /Users/joecrowley/Python/Python
 git remote set-url origin git@github.com:username/repo_name.git
 git remote -v
 pwd
 
+# And also run this to authenticate your SSH key (so can push/pull)
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed12345 # Updating this line to the SSH key.
+ssh -T git@github.com
+
 ```
+
+### First time for repo
+
+This links the working directory to the existing remote, set your working directory first. 
+
+```bash
+
+# 1. Initialize a new Git repo in your current directory
+cd /Users/joecrowley/Python/Python
+git init
+
+# 2. Add your GitHub remote
+git remote add origin git@github.com:Joeacrowley/Python.git
+
+# 3. Verify the remote was added
+git remote -v
+
+```
+
+In this case you may also need:
+
+```bash
+git pull origin main --allow-unrelated-histories
+```
+
+This fetches and merges remote files (in thisc case I was missing .gitignore).
 
 ### Installing new packages
 
@@ -122,6 +154,125 @@ JupyterLab is the closest equivalent to RStudio for Python. It runs in your brow
 | Shift+Enter | Cmd+Enter |
 
 ---
+
+### Managing notebooks
+
+Managing `.ipynb` Files in Git
+
+**Why Jupyter Notebooks are Messy in Git**
+
+`.ipynb` files are JSON under the hood and store more than just code:
+
+- **Cell outputs** are embedded in the JSON — even if code didn't change, the file changes every run
+- **Execution counters** increment every run (`"execution_count": 42`)
+- **Metadata noise** — kernel info, cell IDs shift between runs/environments
+- **Diffs are unreadable** — walls of JSON instead of clean code changes
+
+#### Adding `.ipynb` to `.gitignore`
+
+```bash
+echo "*.ipynb" >> .gitignore
+```
+
+Or open and edit manually:
+
+```bash
+nano .gitignore
+```
+
+Common patterns for Python projects:
+```
+# Jupyter Notebooks
+*.ipynb
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+venv/
+
+# Mac system files
+.DS_Store
+```
+
+Commit the updated `.gitignore`:
+
+```bash
+git add .gitignore
+git commit -m "Update .gitignore"
+git push
+```
+
+> **Note:** `.gitignore` only ignores untracked files. If a file is already committed, run `git rm --cached filename` to untrack it.
+
+---
+
+#### Keeping `.ipynb` Files but with Clean Diffs
+
+For a notes repo where you want to commit notebooks but keep diffs meaningful, use **`nbstripout`**.
+
+It strips all outputs and execution counts before committing, so diffs only show actual code changes.
+
+Note this means that the outputs are **never** shown in files store on GitHub.
+
+**Install nbstripout**
+
+```bash
+pip install nbstripout
+nbstripout --install
+```
+
+*Verify — check `.git/config`*
+
+```bash
+cat .git/config
+```
+
+You should see:
+
+```
+[filter "nbstripout"]
+    clean = "/path/to/python" -m nbstripout
+    smudge = cat
+    required = true
+[diff "ipynb"]
+    textconv = "/path/to/python" -m nbstripout -t
+```
+
+This means nbstripout installed via the **Git filter** mechanism — the preferred approach.
+
+**Last step, create `.gitattributes`**
+
+This file tells Git which files the filter from nbstripout applies to. Here we set to .ipynb files.
+
+```bash
+echo '*.ipynb filter=nbstripout diff=ipynb' > .gitattributes
+```
+
+Verify:
+```bash
+cat .gitattributes
+```
+
+Commit it:
+```bash
+git add .gitattributes
+git commit -m "Add nbstripout git attributes"
+git push
+```
+
+### What nbstripout does
+
+| | |
+|---|---|
+| ❌ Removes | Cell outputs |
+| ❌ Removes | Execution counts |
+| ❌ Removes | Noisy metadata |
+| ✅ Keeps | All code and markdown cells |
+| ✅ Keeps | Notebook structure |
+| ✅ Keeps | Local outputs intact (only stripped on commit) |
 
 ## The Shell / Terminal
 
