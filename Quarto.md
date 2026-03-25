@@ -94,7 +94,10 @@ Render locally:
 quarto render
 ```
 
+View at the '_site/index.html' directly in your browser.
+
 Publish to GitHub Pages:
+
 ```bash
 quarto publish gh-pages
 ```
@@ -110,5 +113,7 @@ Site will be live at:
 ```
 https://joeacrowley.github.io/Python/
 ```
+
+Can be found at: GitHub repository > Settings > Pages
 
 > **Note:** Make the GitHub repo public and enable GitHub Pages under Settings → Pages → Branch: `gh-pages`.

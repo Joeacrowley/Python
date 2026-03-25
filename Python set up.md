@@ -45,17 +45,16 @@ jupyter lab
 
 # In Jupyter terminal, set remote and working directory
 cd /Users/joecrowley/Python/Python
-git remote set-url origin git@github.com:username/repo_name.git
+git remote set-url origin git@github.com:Joeacrowley/Python.git
 git remote -v
 pwd
 
 # And also run this to authenticate your SSH key (so can push/pull)
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed12345 # Updating this line to the SSH key.
+ssh-add ~/.ssh/id_ed25519
 ssh -T git@github.com
 
-```
-
+``` 
 ### First time for repo
 
 This links the working directory to the existing remote, set your working directory first. 
