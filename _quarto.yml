@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Joe's Python Notes"
+  sidebar:
+    contents:
+      - index.md
+      - Python set up.md
+      - Python_notes.ipynb
+
+execute:
+  enabled: true
+  error: true
+
+format:
+  html:
+    theme: cosmo
+    toc: true
