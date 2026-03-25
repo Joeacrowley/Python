@@ -51,13 +51,16 @@ cd /Users/joecrowley/Python/Python
 git remote set-url origin git@github.com:Joeacrowley/Python.git
 git remote -v
 pwd
+```
 
-# And also run this to authenticate your SSH key (so can push/pull)
+If needed, also run this to authenticate your SSH key (so can push/pull). Should only be needed first time using that repo on your machine. 
+
+```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ssh -T git@github.com
-
 ``` 
+
 ### First time for repo
 
 This links the working directory to the existing remote, set your working directory first. 
