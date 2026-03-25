@@ -117,3 +117,6 @@ https://joeacrowley.github.io/Python/
 Can be found at: GitHub repository > Settings > Pages
 
 > **Note:** Make the GitHub repo public and enable GitHub Pages under Settings → Pages → Branch: `gh-pages`.
+
+Note, `quarto publish gh-pages` only pushes the rendered site to the gh-pages branch (what's publicly visible on the website). It doesn't touch your main branch at all.
+So you still need to push main separately with git push to keep your source files backed up and in sync.
