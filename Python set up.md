@@ -43,6 +43,9 @@ jupyter lab
 conda activate myenv
 jupyter lab
 
+# Check current environment - rerun 'conda activate myenv' if needed
+conda info --envs
+
 # In Jupyter terminal, set remote and working directory
 cd /Users/joecrowley/Python/Python
 git remote set-url origin git@github.com:Joeacrowley/Python.git
