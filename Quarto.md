@@ -1,6 +1,8 @@
-## Setting Up Quarto for Jupyter Notebooks
+---
+title: Quarto for Jupyter Notebooks
+---
 
-### Why Quarto
+# Why Quarto
 
 Quarto was chosen over Jupyter Book and nbviewer because it:
 - Executes notebooks at build time — Git stays clean via `nbstripout` (see Python set up), outputs still appear on the site
@@ -10,7 +12,7 @@ Quarto was chosen over Jupyter Book and nbviewer because it:
 
 ---
 
-### Installation
+# Installation
 
 Download and install from https://quarto.org/docs/get-started/ (Mac `.pkg` installer).
 
@@ -27,7 +29,7 @@ which jupyter
 
 ---
 
-### Project Structure
+# Project Structure
 
 Here 'Python' is the overall working directory, '_quarto.yml' describes the website structure Quarto will create, 'index.md' is the landing page (must always use the name 'index'), 'Python_notes.ipynb' is the first of many subject pages (can also be other file types, e.g. .md), and the folder '_site/' is the place where Quarto stores everything it will use to produce the website. 
 
@@ -41,9 +43,13 @@ Python/
 
 ---
 
-### Configuration
+# Configuration
 
 Setting upthe `_quarto.yml` file. It should look something like this. 
+
+Naming pages: **do not put spaces in file names.** Also, avoid capital letters, they create issues in unpredictable ways. For example in these notes we have two markdown files 'getting_started.md' and 'Quarto.md'. If I change the file name of the first to 'Getting_Started.md' it no longer works, while 'Quarto.md' with its capital letter is fine. 
+
+All lower case, no spaces, is safest.
 
 ```yaml
 project:
@@ -120,3 +126,25 @@ Can be found at: GitHub repository > Settings > Pages
 
 Note, `quarto publish gh-pages` only pushes the rendered site to the gh-pages branch (what's publicly visible on the website). It doesn't touch your main branch at all.
 So you still need to push main separately with git push to keep your source files backed up and in sync.
+
+# Setting up a nested sidebar
+
+The below is for a website style output, others are available, e.g. Book. 
+
+```yaml
+
+website:
+  sidebar:
+    contents:
+      - section: "Getting Started"
+        contents:
+          - intro.qmd
+          - installation.qmd
+      - section: "Advanced"
+        contents:
+          - advanced1.qmd
+          - section: "Sub-section"
+            contents:
+              - nested.qmd
+
+```

@@ -7,8 +7,17 @@ website:
   sidebar:
     contents:
       - index.md
-      - Python set up.md
-      - Python_notes.ipynb
+      - section: "Set up"
+        contents:
+          - getting_started.md
+          - jupyter.md
+          - Quarto.md
+      - section: "Using Python"
+        contents:
+          - r_equivalents.md
+          - Python_notes.ipynb
+          - Mapping.ipynb
+          - SPSS data.ipynb
 
 execute:
   enabled: true
