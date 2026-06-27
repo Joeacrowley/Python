@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>python-set-up – Joe's Python Notes</title>
+<title>Getting Started – Joe’s Python Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Python set up.html">Python for R Users — Getting Started</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_started.html">Set up</a></li><li class="breadcrumb-item"><a href="./getting_started.html">Getting Started</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,18 +147,70 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Joe’s Python Notes</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Set up</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Python set up.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Python for R Users — Getting Started</span></a>
+  <a href="./getting_started.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Getting Started</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jupyter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Lab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Quarto.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quarto for Jupyter Notebooks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Using Python</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./r_equivalents.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R Equivalents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Python_notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Python_notes.html</span></a>
+ <span class="menu-text">Basic Python Syntax and Data Types</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Mapping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Mapping IMD</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./SPSS data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SPSS data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -169,43 +221,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#python-for-r-users-getting-started" id="toc-python-for-r-users-getting-started" class="nav-link active" data-scroll-target="#python-for-r-users-getting-started">Python for R Users — Getting Started</a>
-  <ul class="collapse">
-  <li><a href="#key-conceptual-differences" id="toc-key-conceptual-differences" class="nav-link" data-scroll-target="#key-conceptual-differences">Key Conceptual Differences</a></li>
-  </ul></li>
+  <li><a href="#key-conceptual-differences" id="toc-key-conceptual-differences" class="nav-link active" data-scroll-target="#key-conceptual-differences">Key Conceptual Differences</a></li>
   <li><a href="#installation-use-miniconda" id="toc-installation-use-miniconda" class="nav-link" data-scroll-target="#installation-use-miniconda">Installation: Use Miniconda</a>
   <ul class="collapse">
   <li><a href="#day-one-setup" id="toc-day-one-setup" class="nav-link" data-scroll-target="#day-one-setup">Day-one setup</a></li>
+  </ul></li>
   <li><a href="#daily-sesson-set-up" id="toc-daily-sesson-set-up" class="nav-link" data-scroll-target="#daily-sesson-set-up">Daily sesson set up</a></li>
   <li><a href="#first-time-for-repo" id="toc-first-time-for-repo" class="nav-link" data-scroll-target="#first-time-for-repo">First time for repo</a></li>
   <li><a href="#installing-new-packages" id="toc-installing-new-packages" class="nav-link" data-scroll-target="#installing-new-packages">Installing new packages</a></li>
-  <li><a href="#environments" id="toc-environments" class="nav-link" data-scroll-target="#environments">Environments</a></li>
-  </ul></li>
-  <li><a href="#package-management-and-security" id="toc-package-management-and-security" class="nav-link" data-scroll-target="#package-management-and-security">Package Management and Security</a>
+  <li><a href="#environments" id="toc-environments" class="nav-link" data-scroll-target="#environments">Environments</a>
   <ul class="collapse">
+  <li><a href="#package-management-and-security" id="toc-package-management-and-security" class="nav-link" data-scroll-target="#package-management-and-security">Package Management and Security</a></li>
   <li><a href="#reproducing-your-environment" id="toc-reproducing-your-environment" class="nav-link" data-scroll-target="#reproducing-your-environment">Reproducing your environment</a></li>
   <li><a href="#what-goes-on-github" id="toc-what-goes-on-github" class="nav-link" data-scroll-target="#what-goes-on-github">What goes on GitHub</a></li>
   </ul></li>
-  <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link" data-scroll-target="#jupyterlab">JupyterLab</a>
-  <ul class="collapse">
-  <li><a href="#managing-notebooks" id="toc-managing-notebooks" class="nav-link" data-scroll-target="#managing-notebooks">Managing notebooks</a></li>
-  <li><a href="#what-nbstripout-does" id="toc-what-nbstripout-does" class="nav-link" data-scroll-target="#what-nbstripout-does">What nbstripout does</a></li>
-  </ul></li>
-  <li><a href="#the-shell-terminal" id="toc-the-shell-terminal" class="nav-link" data-scroll-target="#the-shell-terminal">The Shell / Terminal</a></li>
-  <li><a href="#r-equivalents-quick-reference" id="toc-r-equivalents-quick-reference" class="nav-link" data-scroll-target="#r-equivalents-quick-reference">R Equivalents Quick Reference</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_started.html">Set up</a></li><li class="breadcrumb-item"><a href="./getting_started.html">Getting Started</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Getting Started</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="python-for-r-users-getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="python-for-r-users-getting-started">Python for R Users — Getting Started</h2>
-<section id="key-conceptual-differences" class="level3">
-<h3 class="anchored" data-anchor-id="key-conceptual-differences">Key Conceptual Differences</h3>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="key-conceptual-differences" class="level1">
+<h1>Key Conceptual Differences</h1>
 <p>Python and R are both interpreted, dynamically typed languages suited to data analysis, but Python’s OOP is <strong>class-centric</strong> (<code>object.method()</code>) while R’s is <strong>function-centric</strong> (<code>method(object)</code>). R has multiple OOP systems (S3, S4, R6); Python has one consistent approach baked into the language.</p>
 <p>Python also lacks built-in vectorisation — you need <code>numpy</code> or <code>pandas</code> for element-wise operations. Other quick differences to internalise:</p>
 <ul>
@@ -216,11 +272,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <hr>
 </section>
-</section>
-<section id="installation-use-miniconda" class="level2">
-<h2 class="anchored" data-anchor-id="installation-use-miniconda">Installation: Use Miniconda</h2>
+<section id="installation-use-miniconda" class="level1">
+<h1>Installation: Use Miniconda</h1>
 <p>Macs ship with a system Python — leave it alone and install your own separately. Python version and environment management is more complex than R’s, which is why tooling exists to handle it.</p>
+<p>In Python, tooling refers to the ecosystem of software tools used to support the development process. Here’s a breakdown of the main categories.</p>
+<p><strong>Package Management</strong></p>
+<p><em>pip</em> — the standard package installer<br>
+<em>pipenv / poetry / uv</em> — dependency management and virtual environments [not explored]<br>
+<em>conda</em> — package and environment manager, popular in data science</p>
 <p><strong>Recommended setup: Miniconda</strong> — installs conda (environment + package manager) and Python, without the 3GB+ bloat of full Anaconda.</p>
+<p>Note: far more work is done in Python (than in R) through the shell / Terminal.</p>
+<p>The shell is a text interface to your operating system. On a Mac, opening Terminal gives you a shell (default: <code>zsh</code>). The terminal panel inside RStudio is exactly the same thing — just embedded in the IDE for convenience. Jupyer Lab also has its own Terminal.</p>
+<p>Most Python tooling, including conda, is operated via the shell.</p>
+<hr>
 <section id="day-one-setup" class="level3">
 <h3 class="anchored" data-anchor-id="day-one-setup">Day-one setup</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an environment</span></span>
@@ -235,273 +299,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Launch JupyterLab</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="daily-sesson-set-up" class="level3">
-<h3 class="anchored" data-anchor-id="daily-sesson-set-up">Daily sesson set up</h3>
+</section>
+<section id="daily-sesson-set-up" class="level1">
+<h1>Daily sesson set up</h1>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Activate environment</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate myenv</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># In Jupyter terminal, set remote and working directory</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/joecrowley/Python/Python</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:Joeacrowley/Python.git</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># And also run this to authenticate your SSH key (so can push/pull)</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Check current environment - rerun 'conda activate myenv' if needed</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> info <span class="at">--envs</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># In Jupyter terminal, set remote and working directory</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/joecrowley/Python/Python</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote set-url origin git@github.com:Joeacrowley/Python.git</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If needed, also run this to authenticate your SSH key (so can push/pull). Should only be needed first time using that repo on your machine.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="first-time-for-repo" class="level3">
-<h3 class="anchored" data-anchor-id="first-time-for-repo">First time for repo</h3>
+<section id="first-time-for-repo" class="level1">
+<h1>First time for repo</h1>
 <p>This links the working directory to the existing remote, set your working directory first.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Initialize a new Git repo in your current directory</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/joecrowley/Python/Python</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Add your GitHub remote</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:Joeacrowley/Python.git</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Verify the remote was added</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Initialize a new Git repo in your current directory</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /Users/joecrowley/Python/Python</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Add your GitHub remote</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin git@github.com:Joeacrowley/Python.git</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Verify the remote was added</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>In this case you may also need:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main <span class="at">--allow-unrelated-histories</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin main <span class="at">--allow-unrelated-histories</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This fetches and merges remote files (in thisc case I was missing .gitignore).</p>
+<p>If cannot push/pull may also need to authenticate SSH key…</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">"</span><span class="va">$(</span><span class="fu">ssh-agent</span> <span class="at">-s</span><span class="va">)</span><span class="st">"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id_ed25519</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="installing-new-packages" class="level3">
-<h3 class="anchored" data-anchor-id="installing-new-packages">Installing new packages</h3>
+<section id="installing-new-packages" class="level1">
+<h1>Installing new packages</h1>
 <p>Once your set up install new packages in the same way as above, but restart the Kernel in Jupyter Lab to get the new package.</p>
 <hr>
 </section>
-<section id="environments" class="level3">
-<h3 class="anchored" data-anchor-id="environments">Environments</h3>
+<section id="environments" class="level1">
+<h1>Environments</h1>
 <p>Virtual environments are real folders on your hard drive — the “virtual” refers to logical isolation, not that it is on a remote server. Each environment contains its own Python interpreter and packages, so projects don’t conflict. This is the equivalent of <code>renv</code> in R.</p>
 <p>Always activate your environment before installing packages.</p>
 <hr>
-</section>
-</section>
 <section id="package-management-and-security" class="level2">
 <h2 class="anchored" data-anchor-id="package-management-and-security">Package Management and Security</h2>
 <p>Python packages are hosted on <strong>PyPI</strong>, which is largely unpoliced — anyone can publish, with no code review or compatibility testing. This is meaningfully less safe than CRAN, which manually reviews submissions and tests packages against each other.</p>
 <p>Practical risks to be aware of: <strong>typosquatting</strong> (fake packages with near-identical names), abandoned packages taken over by bad actors. Stick to well-known packages with large download counts and active repositories. Conda’s default channels are somewhat more curated than raw PyPI.</p>
-<section id="reproducing-your-environment" class="level3">
-<h3 class="anchored" data-anchor-id="reproducing-your-environment">Reproducing your environment</h3>
+</section>
+<section id="reproducing-your-environment" class="level2">
+<h2 class="anchored" data-anchor-id="reproducing-your-environment">Reproducing your environment</h2>
 <p>Two tools, two formats:</p>
 <p><strong>conda</strong> uses <code>.yml</code> (YAML), which captures the full environment in structured format — environment name, channels (where packages were sourced from), and all packages with exact versions including Python itself. Export and recreate with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Export, current environment</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env export <span class="op">&gt;</span> environment.yml</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreate on another machine</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Export, current environment</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env export <span class="op">&gt;</span> environment.yml</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreate on another machine</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>pip</strong> uses <code>.txt</code>, a simpler flat list of packages and versions. It is not, however, more readabe. Export and recreate with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Export, current environment</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreate</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Export, current environment</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;</span> requirements.txt</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreate</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Since you’re using conda, <code>.yml</code> is the right convention. The <code>&gt;</code> operator in both commands is a shell redirect — it takes the output of the command and writes it to a file rather than printing it to the terminal.</p>
 </section>
-<section id="what-goes-on-github" class="level3">
-<h3 class="anchored" data-anchor-id="what-goes-on-github">What goes on GitHub</h3>
+<section id="what-goes-on-github" class="level2">
+<h2 class="anchored" data-anchor-id="what-goes-on-github">What goes on GitHub</h2>
 <p>You never store the environment itself on GitHub — it’s a folder of binaries and installed packages, potentially gigabytes in size and machine-specific. Instead you store the <code>environment.yml</code> file, which is a lightweight text description of what the environment contains.</p>
 <p>Someone cloning your repo then runs:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-f</span> environment.yml</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>And conda rebuilds the environment fresh on their machine from that description.</p>
 <hr>
-</section>
-</section>
-<section id="jupyterlab" class="level2">
-<h2 class="anchored" data-anchor-id="jupyterlab">JupyterLab</h2>
-<p>JupyterLab is the closest equivalent to RStudio for Python. It runs in your browser (locally — nothing goes to the internet) and lets you write code in cells, see output inline, and mix in markdown text.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Jupyter</th>
-<th>R</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Notebook (.ipynb)</td>
-<td>R Markdown (.Rmd)</td>
-</tr>
-<tr class="even">
-<td>Cell</td>
-<td>Code chunk</td>
-</tr>
-<tr class="odd">
-<td>Kernel</td>
-<td>R session</td>
-</tr>
-<tr class="even">
-<td>Shift+Enter</td>
-<td>Cmd+Enter</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<section id="managing-notebooks" class="level3">
-<h3 class="anchored" data-anchor-id="managing-notebooks">Managing notebooks</h3>
-<p>Managing <code>.ipynb</code> Files in Git</p>
-<p><strong>Why Jupyter Notebooks are Messy in Git</strong></p>
-<p><code>.ipynb</code> files are JSON under the hood and store more than just code:</p>
-<ul>
-<li><strong>Cell outputs</strong> are embedded in the JSON — even if code didn’t change, the file changes every run</li>
-<li><strong>Execution counters</strong> increment every run (<code>"execution_count": 42</code>)</li>
-<li><strong>Metadata noise</strong> — kernel info, cell IDs shift between runs/environments</li>
-<li><strong>Diffs are unreadable</strong> — walls of JSON instead of clean code changes</li>
-</ul>
-<section id="adding-.ipynb-to-.gitignore" class="level4">
-<h4 class="anchored" data-anchor-id="adding-.ipynb-to-.gitignore">Adding <code>.ipynb</code> to <code>.gitignore</code></h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"*.ipynb"</span> <span class="op">&gt;&gt;</span> .gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Or open and edit manually:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> .gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Common patterns for Python projects:</p>
-<pre><code># Jupyter Notebooks
-*.ipynb
-
-# Python cache
-__pycache__/
-*.pyc
-
-# Environment files
-.env
-venv/
-
-# Mac system files
-.DS_Store</code></pre>
-<p>Commit the updated <code>.gitignore</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update .gitignore"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<blockquote class="blockquote">
-<p><strong>Note:</strong> <code>.gitignore</code> only ignores untracked files. If a file is already committed, run <code>git rm --cached filename</code> to untrack it.</p>
-</blockquote>
-<hr>
-</section>
-<section id="keeping-.ipynb-files-but-with-clean-diffs" class="level4">
-<h4 class="anchored" data-anchor-id="keeping-.ipynb-files-but-with-clean-diffs">Keeping <code>.ipynb</code> Files but with Clean Diffs</h4>
-<p>For a notes repo where you want to commit notebooks but keep diffs meaningful, use <strong><code>nbstripout</code></strong>.</p>
-<p>It strips all outputs and execution counts before committing, so diffs only show actual code changes.</p>
-<p>Note this means that the outputs are <strong>never</strong> shown in files store on GitHub.</p>
-<p><strong>Install nbstripout</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nbstripout</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nbstripout</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><em>Verify — check <code>.git/config</code></em></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .git/config</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You should see:</p>
-<pre><code>[filter "nbstripout"]
-    clean = "/path/to/python" -m nbstripout
-    smudge = cat
-    required = true
-[diff "ipynb"]
-    textconv = "/path/to/python" -m nbstripout -t</code></pre>
-<p>This means nbstripout installed via the <strong>Git filter</strong> mechanism — the preferred approach.</p>
-<p><strong>Last step, create <code>.gitattributes</code></strong></p>
-<p>This file tells Git which files the filter from nbstripout applies to. Here we set to .ipynb files.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'*.ipynb filter=nbstripout diff=ipynb'</span> <span class="op">&gt;</span> .gitattributes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Verify:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .gitattributes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Commit it:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitattributes</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add nbstripout git attributes"</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-</section>
-<section id="what-nbstripout-does" class="level3">
-<h3 class="anchored" data-anchor-id="what-nbstripout-does">What nbstripout does</h3>
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td>❌ Removes</td>
-<td>Cell outputs</td>
-</tr>
-<tr class="even">
-<td>❌ Removes</td>
-<td>Execution counts</td>
-</tr>
-<tr class="odd">
-<td>❌ Removes</td>
-<td>Noisy metadata</td>
-</tr>
-<tr class="even">
-<td>✅ Keeps</td>
-<td>All code and markdown cells</td>
-</tr>
-<tr class="odd">
-<td>✅ Keeps</td>
-<td>Notebook structure</td>
-</tr>
-<tr class="even">
-<td>✅ Keeps</td>
-<td>Local outputs intact (only stripped on commit)</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="the-shell-terminal" class="level2">
-<h2 class="anchored" data-anchor-id="the-shell-terminal">The Shell / Terminal</h2>
-<p>The shell is a text interface to your operating system. On a Mac, opening Terminal gives you a shell (default: <code>zsh</code>). The terminal panel inside RStudio is exactly the same thing — just embedded in the IDE for convenience. Jupyer Lab also has its own Terminal.</p>
-<p>Most Python tooling, including conda, is operated via the shell.</p>
-<hr>
-</section>
-<section id="r-equivalents-quick-reference" class="level2">
-<h2 class="anchored" data-anchor-id="r-equivalents-quick-reference">R Equivalents Quick Reference</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>R</th>
-<th>Python</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>&lt;-</code></td>
-<td><code>=</code></td>
-</tr>
-<tr class="even">
-<td><code>c(1,2,3)</code></td>
-<td><code>[1, 2, 3]</code></td>
-</tr>
-<tr class="odd">
-<td><code>list()</code></td>
-<td><code>dict()</code></td>
-</tr>
-<tr class="even">
-<td><code>data.frame()</code></td>
-<td><code>pd.DataFrame()</code></td>
-</tr>
-<tr class="odd">
-<td><code>library(dplyr)</code></td>
-<td><code>import pandas as pd</code></td>
-</tr>
-<tr class="even">
-<td><code>%&gt;%</code> pipe</td>
-<td><code>.</code> method chaining</td>
-</tr>
-<tr class="odd">
-<td><code>lm()</code></td>
-<td><code>sklearn.linear_model.LinearRegression()</code></td>
-</tr>
-<tr class="even">
-<td>RMarkdown</td>
-<td>Jupyter notebook</td>
-</tr>
-<tr class="odd">
-<td><code>renv</code></td>
-<td>conda environments</td>
-</tr>
-<tr class="even">
-<td>CRAN</td>
-<td>PyPI (less curated)</td>
-</tr>
-</tbody>
-</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

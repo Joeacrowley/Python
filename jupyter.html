@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Quarto for Jupyter Notebooks – Joe’s Python Notes</title>
+<title>Jupyter Lab – Joe’s Python Notes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_started.html">Set up</a></li><li class="breadcrumb-item"><a href="./Quarto.html">Quarto for Jupyter Notebooks</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_started.html">Set up</a></li><li class="breadcrumb-item"><a href="./jupyter.html">Jupyter Lab</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -164,13 +164,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./jupyter.html" class="sidebar-item-text sidebar-link">
+  <a href="./jupyter.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Jupyter Lab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Quarto.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Quarto.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quarto for Jupyter Notebooks</span></a>
   </div>
 </li>
@@ -221,23 +221,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-quarto" id="toc-why-quarto" class="nav-link active" data-scroll-target="#why-quarto">Why Quarto</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#project-structure" id="toc-project-structure" class="nav-link" data-scroll-target="#project-structure">Project Structure</a></li>
-  <li><a href="#configuration" id="toc-configuration" class="nav-link" data-scroll-target="#configuration">Configuration</a>
-  <ul class="collapse">
-  <li><a href="#render-and-publish" id="toc-render-and-publish" class="nav-link" data-scroll-target="#render-and-publish">Render and Publish</a></li>
+  <li><a href="#code-cells" id="toc-code-cells" class="nav-link active" data-scroll-target="#code-cells">Code Cells</a></li>
+  <li><a href="#adding-markdown-cells" id="toc-adding-markdown-cells" class="nav-link" data-scroll-target="#adding-markdown-cells">Adding Markdown cells</a>
+  <ul>
+  <li><a href="#how-to-insert-a-markdown-cell" id="toc-how-to-insert-a-markdown-cell" class="nav-link" data-scroll-target="#how-to-insert-a-markdown-cell">How to insert a markdown cell</a></li>
+  <li><a href="#rendering-and-editing" id="toc-rendering-and-editing" class="nav-link" data-scroll-target="#rendering-and-editing">Rendering and editing</a></li>
   </ul></li>
-  <li><a href="#setting-up-a-nested-sidebar" id="toc-setting-up-a-nested-sidebar" class="nav-link" data-scroll-target="#setting-up-a-nested-sidebar">Setting up a nested sidebar</a></li>
+  <li><a href="#raw-cells" id="toc-raw-cells" class="nav-link" data-scroll-target="#raw-cells">Raw cells</a>
+  <ul>
+  <li><a href="#common-uses" id="toc-common-uses" class="nav-link" data-scroll-target="#common-uses">Common uses</a>
+  <ul class="collapse">
+  <li><a href="#yaml-front-matter-most-common-in-quarto" id="toc-yaml-front-matter-most-common-in-quarto" class="nav-link" data-scroll-target="#yaml-front-matter-most-common-in-quarto">1. YAML front matter (most common in Quarto)</a></li>
+  <li><a href="#raw-latex" id="toc-raw-latex" class="nav-link" data-scroll-target="#raw-latex">2. Raw LaTeX</a></li>
+  <li><a href="#raw-html-snippets" id="toc-raw-html-snippets" class="nav-link" data-scroll-target="#raw-html-snippets">3. Raw HTML snippets</a></li>
+  <li><a href="#temporarily-disabling-cells" id="toc-temporarily-disabling-cells" class="nav-link" data-scroll-target="#temporarily-disabling-cells">4. Temporarily disabling cells</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul></li>
+  <li><a href="#file-naming-reminder" id="toc-file-naming-reminder" class="nav-link" data-scroll-target="#file-naming-reminder">File naming reminder</a></li>
+  <li><a href="#managing-notebooks-on-github" id="toc-managing-notebooks-on-github" class="nav-link" data-scroll-target="#managing-notebooks-on-github">Managing notebooks on GitHub</a>
+  <ul>
+  <li><a href="#adding-.ipynb-to-.gitignore" id="toc-adding-.ipynb-to-.gitignore" class="nav-link" data-scroll-target="#adding-.ipynb-to-.gitignore">Adding <code>.ipynb</code> to <code>.gitignore</code></a></li>
+  <li><a href="#keeping-.ipynb-files-but-with-clean-diffs" id="toc-keeping-.ipynb-files-but-with-clean-diffs" class="nav-link" data-scroll-target="#keeping-.ipynb-files-but-with-clean-diffs">Keeping <code>.ipynb</code> Files but with Clean Diffs</a></li>
+  <li><a href="#what-nbstripout-does" id="toc-what-nbstripout-does" class="nav-link" data-scroll-target="#what-nbstripout-does">What nbstripout does</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_started.html">Set up</a></li><li class="breadcrumb-item"><a href="./Quarto.html">Quarto for Jupyter Notebooks</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_started.html">Set up</a></li><li class="breadcrumb-item"><a href="./jupyter.html">Jupyter Lab</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Quarto for Jupyter Notebooks</h1>
+<h1 class="title">Jupyter Lab</h1>
 </div>
 
 
@@ -254,121 +270,355 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="why-quarto" class="level1">
-<h1>Why Quarto</h1>
-<p>Quarto was chosen over Jupyter Book and nbviewer because it: - Executes notebooks at build time — Git stays clean via <code>nbstripout</code> (see Python set up), outputs still appear on the site - Has excellent VS Code integration - Produces clean, well-indexed, searchable websites from a set of linked notebooks - Publishes to GitHub Pages in a single command</p>
-<hr>
-</section>
-<section id="installation" class="level1">
-<h1>Installation</h1>
-<p>Download and install from https://quarto.org/docs/get-started/ (Mac <code>.pkg</code> installer).</p>
-<p>Verify:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Ensure Jupyter is installed in your environment:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate myenv</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="project-structure" class="level1">
-<h1>Project Structure</h1>
-<p>Here ‘Python’ is the overall working directory, ’_quarto.yml’ describes the website structure Quarto will create, ‘index.md’ is the landing page (must always use the name ‘index’), ‘Python_notes.ipynb’ is the first of many subject pages (can also be other file types, e.g.&nbsp;.md), and the folder ’_site/’ is the place where Quarto stores everything it will use to produce the website.</p>
-<pre><code>Python/
-├── _quarto.yml        ← site config
-├── index.md           ← landing page
-├── Python_notes.ipynb
-└── _site/             ← built output (gitignored)</code></pre>
-<hr>
-</section>
-<section id="configuration" class="level1">
-<h1>Configuration</h1>
-<p>Setting upthe <code>_quarto.yml</code> file. It should look something like this.</p>
-<p>Naming pages: <strong>do not put spaces in file names.</strong> Also, avoid capital letters, they create issues in unpredictable ways. For example in these notes we have two markdown files ‘getting_started.md’ and ‘Quarto.md’. If I change the file name of the first to ‘Getting_Started.md’ it no longer works, while ‘Quarto.md’ with its capital letter is fine.</p>
-<p>All lower case, no spaces, is safest.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _site</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Joe's Python Notes"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> index.md</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> Python_notes.ipynb</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">enabled</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">error</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li><code>execute.enabled: true</code> — Quarto re-executes notebooks at build time so outputs appear on the site</li>
-<li><code>execute.error: true</code> — rendering continues past errors, displaying them inline</li>
-</ul>
-<p>When editing, save with Ctrl+X → Y → Enter. See prompts at bottom of screen.</p>
-<p>Setting up the <code>index.md</code> file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Joe's Python Notes</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>Welcome to my Python notes site.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-<section id="render-and-publish" class="level2">
-<h2 class="anchored" data-anchor-id="render-and-publish">Render and Publish</h2>
-<p>Add <code>_site/</code> to <code>.gitignore</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"_site/"</span> <span class="op">&gt;&gt;</span> .gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Render locally:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>View at the ’_site/index.html’ directly in your browser.</p>
-<p>Publish to GitHub Pages:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Quarto creates and manages a <code>gh-pages</code> branch automatically, a new branch within your repo — never edit it directly.</p>
+<p>JupyterLab is the closest equivalent to RStudio for Python. It runs in your browser (locally — nothing goes to the internet) and lets you write code in cells, see output inline, and mix in markdown text.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
-<th>Branch</th>
-<th>Contains</th>
+<th>Jupyter</th>
+<th>R</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>main</code></td>
-<td>Source <code>.ipynb</code> files, clean code</td>
+<td>Notebook (.ipynb)</td>
+<td>R Markdown (.Rmd)</td>
 </tr>
 <tr class="even">
-<td><code>gh-pages</code></td>
-<td>Built HTML site, managed by Quarto</td>
+<td>Cell</td>
+<td>Code chunk</td>
+</tr>
+<tr class="odd">
+<td>Kernel</td>
+<td>R session</td>
+</tr>
+<tr class="even">
+<td>Shift+Enter</td>
+<td>Cmd+Enter</td>
 </tr>
 </tbody>
 </table>
-<p>Site will be live at:</p>
-<pre><code>https://joeacrowley.github.io/Python/</code></pre>
-<p>Can be found at: GitHub repository &gt; Settings &gt; Pages</p>
+<hr>
+<section id="code-cells" class="level1">
+<h1>Code Cells</h1>
+<p>The <strong>Code</strong> cell is the default cell type in a Jupyter notebook, and is where you write and execute Python (or other language) commands. Output appears directly below the cell after execution.</p>
+<p><strong>Running cells</strong></p>
+<ul>
+<li><strong>Shift+Enter</strong> — run the cell and move to the next</li>
+<li><strong>Ctrl+Enter</strong> — run the cell and stay on it</li>
+</ul>
+<p><strong>Auto-display behaviour</strong></p>
+<p>Only the <strong>last expression</strong> in a cell is auto-displayed without <code>print()</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x        <span class="co"># this will display 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y        <span class="co"># only y is auto-displayed</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Edit mode vs Command mode</strong></p>
+<ul>
+<li><strong>Enter</strong> — enter edit mode (type inside a cell)</li>
+<li><strong>Escape</strong> — enter command mode (navigate between cells)</li>
+</ul>
+<p><strong>Useful command mode shortcuts</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>Insert cell above</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>Insert cell below</td>
+</tr>
+<tr class="odd">
+<td>D, D</td>
+<td>Delete cell</td>
+</tr>
+<tr class="even">
+<td>M</td>
+<td>Convert to Markdown</td>
+</tr>
+<tr class="odd">
+<td>R</td>
+<td>Convert to Raw</td>
+</tr>
+<tr class="even">
+<td>Z</td>
+<td>Undo</td>
+</tr>
+<tr class="odd">
+<td>L</td>
+<td>Toggle line numbers</td>
+</tr>
+<tr class="even">
+<td>O</td>
+<td>Toggle output</td>
+</tr>
+<tr class="odd">
+<td>Shift+O</td>
+<td>Toggle output scrolling</td>
+</tr>
+<tr class="even">
+<td>C</td>
+<td>Copy cell</td>
+</tr>
+<tr class="odd">
+<td>X</td>
+<td>Cut cell</td>
+</tr>
+<tr class="even">
+<td>V</td>
+<td>Paste cell below</td>
+</tr>
+<tr class="odd">
+<td>Shift+M</td>
+<td>Merge selected cells</td>
+</tr>
+<tr class="even">
+<td>Shift+Up/Down</td>
+<td>Select multiple cells</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Useful edit mode shortcuts (Enter first)</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tab</td>
+<td>Code completion / indent</td>
+</tr>
+<tr class="even">
+<td>Shift+Tab</td>
+<td>Show tooltip / docstring</td>
+</tr>
+<tr class="odd">
+<td>Cmd+Z</td>
+<td>Undo</td>
+</tr>
+<tr class="even">
+<td>Cmd+/</td>
+<td>Toggle comment</td>
+</tr>
+<tr class="odd">
+<td>Ctrl+D</td>
+<td>Delete whole line</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shift+Tab</strong> is particularly handy — place your cursor inside a function’s and press it to see the function’s arguments and documentation leaving the cell.</p>
+<p>**Shared state across cells</p>
+<p>Variables defined in one cell are available in all others — but only if that cell has been <strong>run</strong>. The order you run cells matters, not the order they appear on the page. This can cause confusion if cells are run out of order.</p>
+</section>
+<section id="adding-markdown-cells" class="level1">
+<h1>Adding Markdown cells</h1>
+<p><strong>Why use markdown cells?</strong></p>
+<p>In a <code>.ipynb</code> notebook used within a Quarto website, markdown cells let you add headings, explanatory text, and structure between code cells. Headings render as proper section headings on the page and appear in the table of contents (if <code>toc: true</code> is set in your <code>_quarto.yml</code>).</p>
+<p><strong>Heading hierarchy</strong></p>
+<p>Use standard markdown heading syntax in markdown cells:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section Heading</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sub-section</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Sub-sub-section</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Follow the same conventions as any other Quarto page — if the page title is set via front matter, start body headings at <code>##</code>. Avoid skipping levels.</p>
+<section id="how-to-insert-a-markdown-cell" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-insert-a-markdown-cell">How to insert a markdown cell</h2>
+<ul>
+<li>Click the <strong>cell type dropdown</strong> in the toolbar (which shows “Code”) and select <strong>Markdown</strong><br>
+</li>
+<li>Or press <strong>Escape</strong> to enter command mode, then press <strong>M</strong></li>
+</ul>
+</section>
+<section id="rendering-and-editing" class="level2">
+<h2 class="anchored" data-anchor-id="rendering-and-editing">Rendering and editing</h2>
+<ul>
+<li>Press <strong>Shift+Enter</strong> to render a markdown cell</li>
+<li><strong>Double-click</strong> a rendered cell to return it to editable text</li>
+<li>Press <strong>Shift+Enter</strong> again to re-render</li>
+</ul>
+</section>
+</section>
+<section id="raw-cells" class="level1">
+<h1>Raw cells</h1>
+<p>Jupyter notebooks have three cell types: <strong>Code</strong>, <strong>Markdown</strong>, and <strong>Raw</strong>. Raw cells are neither executed nor rendered — their content is passed through exactly as written. They are invisible in the final output unless a specific pipeline is designed to read them.</p>
+<p><strong>How to insert a Raw cell</strong></p>
+<p>Use the same cell type dropdown where you find Code and Markdown, and select <strong>Raw</strong>.</p>
+<section id="common-uses" class="level2">
+<h2 class="anchored" data-anchor-id="common-uses">Common uses</h2>
+<section id="yaml-front-matter-most-common-in-quarto" class="level3">
+<h3 class="anchored" data-anchor-id="yaml-front-matter-most-common-in-quarto">1. YAML front matter (most common in Quarto)</h3>
+<p>In a Quarto <code>.ipynb</code> file, YAML front matter must go in a Raw cell at the top of the notebook, so it is not rendered as markdown or executed as code:</p>
+<pre><code>[Raw cell]      ---
+                title: "My Notebook"
+                format:
+                  html:
+                    toc: true
+                ---</code></pre>
+</section>
+<section id="raw-latex" class="level3">
+<h3 class="anchored" data-anchor-id="raw-latex">2. Raw LaTeX</h3>
+<p>When converting a notebook to PDF via nbconvert, Raw cells can contain LaTeX commands that are passed directly to the LaTeX renderer:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newpage</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  E = mc^2</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="raw-html-snippets" class="level3">
+<h3 class="anchored" data-anchor-id="raw-html-snippets">3. Raw HTML snippets</h3>
+<p>Embedding HTML that you don’t want Quarto or Jupyter to escape or process, such as custom <code>&lt;div&gt;</code> tags or inline styles:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"custom-box"</span><span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  Some custom content</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="temporarily-disabling-cells" class="level3">
+<h3 class="anchored" data-anchor-id="temporarily-disabling-cells">4. Temporarily disabling cells</h3>
+<p>Raw cells are sometimes used as a quick way to “comment out” a markdown or code cell without deleting it — since Raw cells are ignored by both the renderer and executor. For code cells, commenting out with <code>#</code> is more conventional, but converting to Raw is a handy shortcut for markdown cells.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Cell type</th>
+<th>Executed?</th>
+<th>Rendered?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Code</td>
+<td>Yes</td>
+<td>Output shown</td>
+</tr>
+<tr class="even">
+<td>Markdown</td>
+<td>No</td>
+<td>Rendered as HTML</td>
+</tr>
+<tr class="odd">
+<td>Raw</td>
+<td>No</td>
+<td>Passed through as-is</td>
+</tr>
+</tbody>
+</table>
+<p>In day-to-day Quarto use, the main reason to reach for a Raw cell is the <strong>YAML front matter</strong> at the top of a notebook.</p>
+</section>
+</section>
+<section id="file-naming-reminder" class="level1">
+<h1>File naming reminder</h1>
+<p>Avoid spaces and mid-word capital letters in notebook filenames, e.g.&nbsp;use <code>python_notes.ipynb</code> rather than <code>Python_Notes.ipynb</code>, to prevent broken links in Quarto websites.</p>
+</section>
+<section id="managing-notebooks-on-github" class="level1">
+<h1>Managing notebooks on GitHub</h1>
+<p>Managing <code>.ipynb</code> Files in Git</p>
+<p><strong>Why Jupyter Notebooks are Messy in Git</strong></p>
+<p><code>.ipynb</code> files are JSON under the hood and store more than just code:</p>
+<ul>
+<li><strong>Cell outputs</strong> are embedded in the JSON — even if code didn’t change, the file changes every run</li>
+<li><strong>Execution counters</strong> increment every run (<code>"execution_count": 42</code>)</li>
+<li><strong>Metadata noise</strong> — kernel info, cell IDs shift between runs/environments</li>
+<li><strong>Diffs are unreadable</strong> — walls of JSON instead of clean code changes</li>
+</ul>
+<section id="adding-.ipynb-to-.gitignore" class="level2">
+<h2 class="anchored" data-anchor-id="adding-.ipynb-to-.gitignore">Adding <code>.ipynb</code> to <code>.gitignore</code></h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"*.ipynb"</span> <span class="op">&gt;&gt;</span> .gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or open and edit manually:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> .gitignore</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Common patterns for Python projects:</p>
+<pre><code># Jupyter Notebooks
+*.ipynb
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+venv/
+
+# Mac system files
+.DS_Store</code></pre>
+<p>Commit the updated <code>.gitignore</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitignore</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Update .gitignore"</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <blockquote class="blockquote">
-<p><strong>Note:</strong> Make the GitHub repo public and enable GitHub Pages under Settings → Pages → Branch: <code>gh-pages</code>.</p>
+<p><strong>Note:</strong> <code>.gitignore</code> only ignores untracked files. If a file is already committed, run <code>git rm --cached filename</code> to untrack it.</p>
 </blockquote>
-<p>Note, <code>quarto publish gh-pages</code> only pushes the rendered site to the gh-pages branch (what’s publicly visible on the website). It doesn’t touch your main branch at all. So you still need to push main separately with git push to keep your source files backed up and in sync.</p>
+<hr>
 </section>
+<section id="keeping-.ipynb-files-but-with-clean-diffs" class="level2">
+<h2 class="anchored" data-anchor-id="keeping-.ipynb-files-but-with-clean-diffs">Keeping <code>.ipynb</code> Files but with Clean Diffs</h2>
+<p>For a notes repo where you want to commit notebooks but keep diffs meaningful, use <strong><code>nbstripout</code></strong>.</p>
+<p>It strips all outputs and execution counts before committing, so diffs only show actual code changes.</p>
+<p>Note this means that the outputs are <strong>never</strong> shown in files store on GitHub.</p>
+<p><strong>Install nbstripout</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install nbstripout</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">nbstripout</span> <span class="at">--install</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Verify — check <code>.git/config</code></em></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .git/config</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>You should see:</p>
+<pre><code>[filter "nbstripout"]
+    clean = "/path/to/python" -m nbstripout
+    smudge = cat
+    required = true
+[diff "ipynb"]
+    textconv = "/path/to/python" -m nbstripout -t</code></pre>
+<p>This means nbstripout installed via the <strong>Git filter</strong> mechanism — the preferred approach.</p>
+<p><strong>Last step, create <code>.gitattributes</code></strong></p>
+<p>This file tells Git which files the filter from nbstripout applies to. Here we set to .ipynb files.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">'*.ipynb filter=nbstripout diff=ipynb'</span> <span class="op">&gt;</span> .gitattributes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Verify:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> .gitattributes</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Commit it:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .gitattributes</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add nbstripout git attributes"</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="setting-up-a-nested-sidebar" class="level1">
-<h1>Setting up a nested sidebar</h1>
-<p>The below is for a website style output, others are available, e.g.&nbsp;Book.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">sidebar</span><span class="kw">:</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Getting Started"</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> intro.qmd</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> installation.qmd</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Advanced"</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> advanced1.qmd</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="kw">-</span><span class="at"> </span><span class="fu">section</span><span class="kw">:</span><span class="at"> </span><span class="st">"Sub-section"</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="at">            </span><span class="fu">contents</span><span class="kw">:</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="at">              </span><span class="kw">-</span><span class="at"> nested.qmd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="what-nbstripout-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-nbstripout-does">What nbstripout does</h2>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td>❌ Removes</td>
+<td>Cell outputs</td>
+</tr>
+<tr class="even">
+<td>❌ Removes</td>
+<td>Execution counts</td>
+</tr>
+<tr class="odd">
+<td>❌ Removes</td>
+<td>Noisy metadata</td>
+</tr>
+<tr class="even">
+<td>✅ Keeps</td>
+<td>All code and markdown cells</td>
+</tr>
+<tr class="odd">
+<td>✅ Keeps</td>
+<td>Notebook structure</td>
+</tr>
+<tr class="even">
+<td>✅ Keeps</td>
+<td>Local outputs intact (only stripped on commit)</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

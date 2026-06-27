@@ -2,26 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://Joeacrowley.github.io/Python/Quarto.html</loc>
-    <lastmod>2026-03-25T11:19:59.681Z</lastmod>
+    <lastmod>2026-03-25T12:12:03.995Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Joeacrowley.github.io/Python/python_syntax_basics.html</loc>
+    <lastmod>2026-03-25T23:35:08.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Joeacrowley.github.io/Python/r_equivalents.html</loc>
+    <lastmod>2026-03-25T23:43:25.919Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Joeacrowley.github.io/Python/getting_started.html</loc>
+    <lastmod>2026-03-25T20:14:41.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Joeacrowley.github.io/Python/Python_notes.html</loc>
+    <lastmod>2026-06-27T10:02:50.801Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Joeacrowley.github.io/Python/jupyter.html</loc>
+    <lastmod>2026-03-26T19:42:07.650Z</lastmod>
   </url>
   <url>
     <loc>https://Joeacrowley.github.io/Python/index.html</loc>
     <lastmod>2026-03-24T20:07:40.154Z</lastmod>
   </url>
   <url>
-    <loc>https://Joeacrowley.github.io/Python/Python set up.html</loc>
-    <lastmod>2026-03-25T11:05:49.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Joeacrowley.github.io/Python/Python_notes.html</loc>
-    <lastmod>2026-03-25T11:21:37.478Z</lastmod>
-  </url>
-  <url>
-    <loc>https://Joeacrowley.github.io/Python/Read in data.html</loc>
-    <lastmod>2026-03-25T11:21:40.285Z</lastmod>
-  </url>
-  <url>
     <loc>https://Joeacrowley.github.io/Python/Mapping.html</loc>
-    <lastmod>2026-03-25T11:21:51.794Z</lastmod>
+    <lastmod>2026-06-27T10:03:19.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Joeacrowley.github.io/Python/SPSS data.html</loc>
+    <lastmod>2026-06-27T10:03:39.677Z</lastmod>
   </url>
 </urlset>
